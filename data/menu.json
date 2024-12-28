@@ -1,5 +1,5 @@
 [
-  {"Id": 0, "Title": "Languages", "ParentId":  null, "HasItems": true},
+  {"Id": 0, "Title": "Menu", "ParentId":  null, "HasItems": true},
   {"Id": 1, "Title":"Deutsch", "ParentId": 0, "HasItems": true},
   {"Id": 2, "Title":"English", "ParentId": 0, "HasItems": true},
   {"Id": 3, "Title":"Russian", "ParentId": 0, "HasItems": false},
