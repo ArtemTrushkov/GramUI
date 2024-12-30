@@ -7,13 +7,8 @@ getJsonRequest("data/menu.json")
     .then( result => {
         topicList = result; 
         createMenuByTopic(0);
+        addPages();
     });
-
-function htmlToElement(html) {
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content.childNodes[0];
-}
 
 //----Advanced Topics
 
