@@ -1,23 +1,11 @@
 /* Import Google font - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
 .sidebar {
-    position: fixed;
-    height: 100%;
+    transition: all 0.5s ease;
     width: 260px;
     background: #11101d;
-    padding: 15px;
     z-index: 99;
 }
-.logo {
-    font-size: 25px;
-    padding: 0 15px;
-}
+
 .sidebar a {
     color: #fff;
     text-decoration: none;
@@ -26,7 +14,6 @@
     position: relative;
     height: 100%;
     width: 100%;
-    margin-top: 40px;
     overflow-y: scroll;
 }
 .menu-content::-webkit-scrollbar {
@@ -48,8 +35,8 @@
 }
 .item a,
 .submenu-item {
-    padding: 16px;
-    width: 100%;
+    padding: 15px;
+    margin: 15px;
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
@@ -87,26 +74,8 @@
 .submenu .menu-title i {
     margin-right: 10px;
 }
-.navbar,
-.main {
-    left: 260px;
-    width: calc(100% - 260px);
-    transition: all 0.5s ease;
-    z-index: 1000;
-}
-.sidebar.close ~ .navbar,
-.sidebar.close ~ .main {
-    left: 0;
-    width: 100%;
-}
-.navbar {
-    position: fixed;
-    color: #fff;
-    padding: 15px 20px;
-    font-size: 25px;
-    background: #11101d;
-    cursor: pointer;
-}
-.navbar #sidebar-close {
-    cursor: pointer;
+
+.sidebar.close{
+    width: 0;
+    padding: 0;
 }

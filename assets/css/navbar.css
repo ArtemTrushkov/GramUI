@@ -1,0 +1,24 @@
+.menu-button{
+ padding: 10px;   
+}
+
+.logo {
+ font-size: 25px;
+ padding: 0 15px;
+}
+
+.navbar {
+ color: #fff;
+ padding: 15px 20px;
+ font-size: 25px;
+ background: #11101d;
+ cursor: pointer;
+}
+.navbar #sidebar-close {
+ cursor: pointer;
+}
+
+.navbar a {
+ color: #fff;
+ text-decoration: none;
+}
