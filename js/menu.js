@@ -3,7 +3,7 @@ const sidebarClose = document.querySelector("#sidebar-close");
 sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
 
 let topicList;
-getRequest("data/menu.json")
+getJsonRequest("data/menu.json")
     .then( result => {
         topicList = result; 
         createMenuByTopic(0);
@@ -91,14 +91,4 @@ function getMenuElement(id, title){
         "</li>";
 
     return htmlToElement(htmlEl);
-}
-
-//----DATABASE
-function getRequest(url){
-     return fetch(url)
-        .then((res) => res.text())
-        .then((text) => {
-            return JSON.parse(text);
-        })
-        .catch((e) => console.error(e));
 }
