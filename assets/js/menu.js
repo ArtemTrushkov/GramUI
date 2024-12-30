@@ -87,7 +87,7 @@ function getSubMenuElement(id, title) {
 function getMenuElement(id, title){
     let htmlEl =
         "<li class=\"item\"> " +
-        "   <a topic-id=\"" + id + "\" href=\"#"+ id +"\">" + title + "</a> " +
+        "   <a topic-id=\"" + id + "\" href=\"?topicId="+ id +"\">" + title + "</a> " +
         "</li>";
 
     return htmlToElement(htmlEl);
