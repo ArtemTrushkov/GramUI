@@ -12,7 +12,25 @@ function initPage(){
             ['link', 'image', 'video', 'fullScreen', 'showBlocks', 'codeView', 'preview', 'print', 'save']
         ],
         callBackSave : function (contents, isChanged) {
-            console.log(contents);
+            let topicId = prompt("Please enter topic id");
+            let text;
+            if (topicId == null || topicId == "") {
+                return;
+            } else {
+                let fileName = topicId + ".html";
+                download(contents, fileName)
+            }
         }
     });
+}
+
+function download(text, name) {
+    let blob = new Blob([text], { type: "text/plain" });
+
+    var url = URL.createObjectURL(blob),
+        a = document.createElement("a");
+    a.href = url;
+    a.download = name;
+    a.click(); a.remove();
+    URL.revokeObjectURL(url);
 }
