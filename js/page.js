@@ -1,19 +1,34 @@
-let page = urlParams.get('page');
-if(page !== null){
-    getRequest("/html/pages/"+ page +".html")
-        .then(page => {
+let pageName = urlParams.get('page');
+let body = document.body;
+
+if(pageName !== null){
+    getRequest("/html/pages/"+ pageName +".html")
+        .then(pageHtml => {
             mainElement.innerHTML = "";
-            mainElement.append(htmlToElement(page));
+            mainElement.append(htmlToElement(pageHtml));
+
+            let script = document.createElement('script');
+            script.onload = function () {
+                initPage();
+            };
+            script.src = "js/" + pageName + ".js";
+            document.head.appendChild(script);
     })
 }
 
 function addPages(){
+    getJsonRequest("/data/pages.json")
+        .then(pages => {
+            let menuItems = document.getElementsByClassName("menu-items")[0];
+            pages.forEach( page => {
+                let pageElement = getPageElement(page.Id, page.Title);
+                menuItems.append(pageElement);
+            })
+        });
     let pages = [];
-    pages.push(getPageElement("html-editor", "Editor"));
+    pages.push();
     
-    let menuItems = document.getElementsByClassName("menu-items")[0];
     pages.forEach(i => {
-        menuItems.append(i);
     })
 }
 
