@@ -18,7 +18,7 @@ function initPage(){
                 return;
             } else {
                 let fileName = topicId + ".html";
-                download(contents, fileName)
+                download(wrapContent(contents), fileName)
             }
         }
     });
@@ -33,4 +33,9 @@ function download(text, name) {
     a.download = name;
     a.click(); a.remove();
     URL.revokeObjectURL(url);
+}
+
+function wrapContent(text){
+    return "<div class=\"full-size\">" + text + "</div>"
+    
 }

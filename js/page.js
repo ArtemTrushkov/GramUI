@@ -11,7 +11,7 @@ if(pageName !== null){
             script.onload = function () {
                 initPage();
             };
-            script.src = "js/" + pageName + ".js";
+            script.src = "js/pages/" + pageName + ".js";
             document.head.appendChild(script);
     })
 }

@@ -1,5 +1,8 @@
 let mainElement = document.querySelector(".main");
 let queryString = window.location.search;
+if(queryString.length === 0){
+  queryString = "?page=home"
+}
 let urlParams = new URLSearchParams(queryString);
 
 function getJsonRequest(url){
@@ -20,5 +23,5 @@ function getRequest(url){
 function htmlToElement(html) {
     const template = document.createElement('template');
     template.innerHTML = html;
-    return template.content.childNodes[0];
+    return template.content.children[0];
 }
