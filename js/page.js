@@ -2,7 +2,7 @@ let pageName = urlParams.get('page');
 let body = document.body;
 
 if(pageName !== null){
-    getRequest("/html/pages/"+ pageName +".html")
+    getRequest("html/pages/"+ pageName +".html")
         .then(pageHtml => {
             mainElement.innerHTML = "";
             mainElement.append(htmlToElement(pageHtml));
@@ -21,7 +21,7 @@ if(pageName !== null){
 // html file: html-editor.html
 //js file: html-editor.js
 function addPages(){
-    getJsonRequest("/data/pages.json")
+    getJsonRequest("data/pages.json")
         .then(pages => {
             let menuItems = document.getElementsByClassName("menu-items")[0];
             pages.forEach( page => {
