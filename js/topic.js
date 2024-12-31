@@ -1,6 +1,6 @@
 const topicId = Number(urlParams.get('topicId'));
 if(topicId > 0){
-    getRequest("/html/split-view.html")
+    getRequest("html/split-view.html")
         .then(splitview => {
             GetTopicData(topicId)
                 .then( topicData => {
@@ -14,7 +14,7 @@ if(topicId > 0){
 }
 
 function GetTopicData(topicId){
-    return getRequest("/html/topics/"+topicId+".html")
+    return getRequest("html/topics/"+topicId+".html")
         .then( topicHtml => {
              return {
                  html: topicHtml,
