@@ -16,6 +16,10 @@ if(pageName !== null){
     })
 }
 
+// make sure to create html and js file for page id;
+//pageId: html-editor
+// html file: html-editor.html
+//js file: html-editor.js
 function addPages(){
     getJsonRequest("/data/pages.json")
         .then(pages => {
@@ -25,11 +29,6 @@ function addPages(){
                 menuItems.append(pageElement);
             })
         });
-    let pages = [];
-    pages.push();
-    
-    pages.forEach(i => {
-    })
 }
 
 function getPageElement(pageId, pageTitle){
