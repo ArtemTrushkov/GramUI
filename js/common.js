@@ -1,9 +1,9 @@
 let mainElement = document.querySelector(".main");
 let queryString = window.location.search;
-if(queryString.length === 0){
-  queryString = "?page=home"
-}
 let urlParams = new URLSearchParams(queryString);
+let topicId = Number(urlParams.get('topicId'));
+
+if(queryString.length === 0) queryString = "?page=home";
 
 function getJsonRequest(url){
     return fetch(url)
