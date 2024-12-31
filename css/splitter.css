@@ -52,6 +52,10 @@
   height: 100%;
 }
 
+.split-view-part{
+  padding: 20px;
+}
+
 .vertically_divided
 {
   height: 100%;

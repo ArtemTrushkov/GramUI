@@ -3,7 +3,6 @@ getJsonRequest("data/menu.json")
     .then( result => {
         topicList = result; 
         createMenuByTopic(0);
-        addPages();
     });
 
 //----Advanced Topics
@@ -29,6 +28,12 @@ function createMenuByTopic(topicId){
     })
     
     AddMenuItemListeners();
+    
+    if(topicId === 0){
+        let first= document.querySelector(".submenu-item");
+        first.style.display = "none"
+        addPages();
+    }
 }
 
 function AddMenuItemListeners(){
