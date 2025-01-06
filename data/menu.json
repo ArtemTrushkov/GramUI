@@ -1,11 +1,19 @@
 [
   {"Id": 0, "Title": "Languages", "ParentId":  null, "HasItems": true},
   {"Id": 1, "Title":"Deutsch", "ParentId": 0, "HasItems": true},
-  {"Id": 2, "Title":"English", "ParentId": 0, "HasItems": true},
-  {"Id": 3, "Title":"Russian", "ParentId": 0, "HasItems": false},
-  {"Id": 4, "Title":"Articles", "ParentId": 1, "HasItems": true},
-  {"Id": 5, "Title":"Verbs", "ParentId": 1, "HasItems": false},
-  {"Id": 6, "Title":"Adverbs", "ParentId": 1, "HasItems": false},
-  {"Id": 7, "Title":"Adverbs", "ParentId": 2, "HasItems": false},
-  {"Id": 7, "Title":"AdverbsSub", "ParentId": 4, "HasItems": false}
+  {"Id": 10, "Title":"Artikel", "ParentId": 1, "HasItems": false},
+  {"Id": 15, "Title":"Substantive", "ParentId": 1, "HasItems": true},
+  {"Id": 16, "Title":"Singular", "ParentId": 15, "HasItems": false},
+  {"Id": 20, "Title":"Plural", "ParentId": 15, "HasItems": false},
+  {"Id": 22, "Title":"Adjektive", "ParentId": 1, "HasItems": false},
+  {"Id": 25, "Title":"Vergleichsgrade", "ParentId": 1, "HasItems": false},
+  {"Id": 30, "Title":"Pronomen", "ParentId": 1, "HasItems": false},
+  {"Id": 35, "Title":"Ziffer", "ParentId": 1, "HasItems": false},
+  {"Id": 40, "Title":"Präpositionen", "ParentId": 1, "HasItems": true},
+  {"Id": 45, "Title":"Präpositionen (Akk)", "ParentId": 40, "HasItems": false},
+  {"Id": 50, "Title":"Präpositionen (Dat)", "ParentId": 40, "HasItems": false},
+  {"Id": 55, "Title":"Präpositionen (Akk+Dat)", "ParentId": 40, "HasItems": false},
+  {"Id": 60, "Title":"Präpositionen (Gen)", "ParentId": 40, "HasItems": false},
+  {"Id": 65, "Title":"Partizip", "ParentId": 1, "HasItems": false},
+  {"Id": 70, "Title":"Verbformen", "ParentId": 1, "HasItems": false}
 ]

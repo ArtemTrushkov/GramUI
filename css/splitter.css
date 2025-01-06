@@ -54,6 +54,7 @@
 
 .split-view-part{
   padding: 20px;
+  overflow: scroll !important;
 }
 
 .vertically_divided

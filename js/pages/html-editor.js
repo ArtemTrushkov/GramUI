@@ -3,8 +3,8 @@ function initPage(){
     
     SUNEDITOR.create('sample', {
         width : '100%',
-        height : parent.clientHeight - 60,
-        maxHeight: parent.clientHeight - 60,
+        height : parent.clientHeight - 70,
+        maxHeight: parent.clientHeight - 70,
         buttonList : [
             ['undo', 'redo', 'font', 'fontSize', 'formatBlock'],
             ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript', 'removeFormat'],

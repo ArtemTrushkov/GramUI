@@ -1,0 +1,22 @@
+table, th, td {
+     border: 1px solid black;
+     border-collapse: collapse !important;
+}
+
+th, td {
+        padding: 2px;
+}
+
+ol {
+        padding: 10px;
+    
+}
+
+ol > li {
+        padding-left: 10px;
+}
+
+p {
+        padding-top: 5px;
+        padding-bottom: 5px;
+}
